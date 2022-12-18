@@ -3,6 +3,7 @@ echo Base Install - intended for any Fedora-based machine
 
 echo :::::::
 echo Initial Update
+cd
 sudo dnf install -y fedora-workstation-repositories
 sudo dnf update
 sudo dnf upgrade -y
@@ -10,7 +11,7 @@ sudo dnf upgrade -y
 echo :::::::
 echo Importing Terminal Profile
 sudo dnf install -y dconf-editor
-dconf load /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/ < terminal-profile.dconf
+dconf load /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/ < ~/all-the-things/config-files/terminal-profile.dconf
 
 echo :::::::
 echo Installing Chrome

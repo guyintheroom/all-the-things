@@ -3,6 +3,7 @@ echo Base Install - intended for any Arch-based machine running GNOME
 
 echo :::::::
 echo Initial Update
+cd
 sudo pacman -Syu --noconfirm
 sudo pacman -Sy --needed base-devel git --noconfirm
 
@@ -18,7 +19,7 @@ cd install-repo-arch
 echo :::::::
 echo Importing Terminal Profile
 sudo pacman -S --needed dconf-editor --noconfirm
-dconf load /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/ < terminal-profile.dconf
+dconf load /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/ < ~/all-the-things/config-files/terminal-profile.dconf
 
 echo :::::::
 echo Installing Google Drive Dependencies
