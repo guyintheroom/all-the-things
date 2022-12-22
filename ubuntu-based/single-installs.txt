@@ -23,4 +23,3 @@ sudo nala install lutris
 #		Click on the download button for Wine > Select the latest version of Proton
 #		Back in the settings > Click the gear on Wine
 #		Select the version of Proton you just downloaded under the “Wine Version”
-
