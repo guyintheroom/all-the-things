@@ -16,7 +16,7 @@ sudo nala install steam-installer
 # ::::::: Heroic Launcher (Epic Games) :::::::
 bash <(wget -qO- https://raw.githubusercontent.com/Heroic-Games-Launcher/HeroicGamesLauncher/main/rauldipeas.sh)
 
-# Lutris Install
+# ::::::: Lutris Install :::::::
 sudo nala install lutris
 #	Installing Non-Steam Games
 #		Preferences > Runners
