@@ -16,11 +16,10 @@ sudo nala install steam-installer
 # ::::::: Heroic Launcher (Epic Games) :::::::
 bash <(wget -qO- https://raw.githubusercontent.com/Heroic-Games-Launcher/HeroicGamesLauncher/main/rauldipeas.sh)
 
-# Lutris Install
+# ::::::: Lutris Install :::::::
 sudo nala install lutris
 #	Installing Non-Steam Games
 #		Preferences > Runners
 #		Click on the download button for Wine > Select the latest version of Proton
 #		Back in the settings > Click the gear on Wine
 #		Select the version of Proton you just downloaded under the “Wine Version”
-
