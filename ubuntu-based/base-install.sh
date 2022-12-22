@@ -42,7 +42,7 @@ sudo nala install gnome-shell-extension-manager -y
 
 echo :::::::
 echo Installing Random Apps
-sudo nala install neofetch pavucontrol mpv bashtop tldr trash-cli cmatrix -y
+sudo nala install neofetch pavucontrol mpv bashtop tldr trash-cli audacious -y
 
 echo :::::::
 echo Job Done!!
