@@ -28,20 +28,16 @@ sudo pacman -S gnome-online-accounts gvfs-goa gvfs-google --noconfirm
 echo :::::::
 echo Installing Snap
 # Enable the extra repository in pacman.conf
-sed -i '/\[extra\]/s/^#//g' /etc/pacman.conf
-sed -i '/Include/s/^#//g' /etc/pacman.conf
-
+sudo sed -i '/\[extra\]/s/^#//g' /etc/pacman.conf
+sudo sed -i '/Include/s/^#//g' /etc/pacman.conf
 # Update the package database
 sudo pacman -Sy
-
 # Install the snapd package
 sudo pacman -S snapd --noconfirm
-
 # Enable the snapd service
 sudo systemctl enable --now snapd.socket
-
 # Install the snap command-line tool
-sudo pacman -S snapd-glib
+sudo pacman -S snapd-glib --noconfirm
 
 echo :::::::
 echo Installing Chrome
@@ -58,7 +54,7 @@ sudo pacman -R firefox --noconfirm
 echo :::::::
 echo Installing Gnome Extensions
 sudo pacman -S --needed gnome-shell-extensions --noconfirm
-sudo pacman -Syu --needed libgtop lm_sensors gnome-icon-theme-symbolic gnome-icon-theme-git --noconfirm
+sudo pacman -S --needed libgtop lm_sensors gnome-icon-theme-symbolic gnome-icon-theme-git --noconfirm
 sudo yay -S --needed gnome-shell-extension-pop-shell --noconfirm
 
 echo :::::::
