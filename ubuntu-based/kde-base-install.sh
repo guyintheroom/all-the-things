@@ -34,13 +34,6 @@ echo pausing
 read
 
 echo :::::::
-echo Installing Gnome Extensions
-sudo nala install gnome-shell-extensions -y
-sudo nala install gir1.2-gtop-2.0 lm-sensors -y
-sudo nala install gnome-tweaks -y
-sudo nala install gnome-shell-extension-manager -y
-
-echo :::::::
 echo Installing Random Apps
 sudo nala install neofetch pavucontrol mpv bashtop tldr trash-cli audacious rpi-imager
 

@@ -1,20 +1,20 @@
 #!/bin/bash
-echo Base Install - intended for any Arch-based machine running GNOME
+echo Base Install - Arch-based machines running GNOME
+echo Press Any Key to Continue
+read
 
 echo :::::::
-echo Initial Update
+echo Initial Things
 cd
 sudo pacman -Syu --noconfirm
-sudo pacman -Sy --needed base-devel git --noconfirm
+sudo pacman -S --needed base-devel git --noconfirm
 
 echo :::::::
 echo Installing Yay
-cd
-git clone https://aur.archlinux.org/yay-bin
-cd yay-bin
+git clone https://aur.archlinux.org/yay.git
+cd yay
 makepkg -si --noconfirm
 cd
-cd install-repo-arch
 
 echo :::::::
 echo Importing Terminal Profile
@@ -27,20 +27,28 @@ sudo pacman -S gnome-online-accounts gvfs-goa gvfs-google --noconfirm
 
 echo :::::::
 echo Installing Snap
+# Enable the extra repository in pacman.conf
+sed -i '/\[extra\]/s/^#//g' /etc/pacman.conf
+sed -i '/Include/s/^#//g' /etc/pacman.conf
+
+# Update the package database
+sudo pacman -Sy
+
+# Install the snapd package
 sudo pacman -S snapd --noconfirm
+
+# Enable the snapd service
 sudo systemctl enable --now snapd.socket
-sudo systemctl status snapd.socket
-echo Reboot require prior to package installation!!
+
+# Install the snap command-line tool
+sudo pacman -S snapd-glib
 
 echo :::::::
 echo Installing Chrome
+# Installing Gnome Keyring
 sudo pacman -S --needed seahorse --noconfirm
-cd
-git clone https://aur.archlinux.org/google-chrome.git
-cd google-chrome
-makepkg -is --noconfirm
-cd
-cd install-repo-arch
+# Chrome
+sudo pacman -S google-chrome --noconfirm
 
 echo :::::::
 echo Removing Firefox
@@ -51,17 +59,14 @@ echo :::::::
 echo Installing Gnome Extensions
 sudo pacman -S --needed gnome-shell-extensions --noconfirm
 sudo pacman -Syu --needed libgtop lm_sensors gnome-icon-theme-symbolic gnome-icon-theme-git --noconfirm
-yay -S --needed gnome-shell-extension-pop-shell --noconfirm
+sudo yay -S --needed gnome-shell-extension-pop-shell --noconfirm
 
 echo :::::::
-echo Installing Discord, Neofetch, Pulse Audio Control, MPV, Bashtop 
-sudo pacman -S --needed discord neofetch pavucontrol mpv bashtop --noconfirm
+echo Installing Random Apps
+sudo pacman -S --needed discord neofetch pavucontrol mpv --noconfirm
 
 echo :::::::
 echo Job Done!!
 echo Reboot Needed!!
 echo :::::::
-echo Post Install Notes
-echo -- Reboot and run this script again!
-echo -- After reboot, enable Pop-Shell in Extensions app
 read
