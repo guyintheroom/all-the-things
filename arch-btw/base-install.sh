@@ -9,12 +9,22 @@ cd
 sudo pacman -Syu --noconfirm
 sudo pacman -S --needed base-devel git --noconfirm
 sudo pacman -S --needed gnome-terminal --noconfirm
+git config --global core.editor nano
 
 echo :::::::
 echo Installing Yay
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si --noconfirm
+cd
+
+echo :::::::
+echo Installing Snap
+git clone https://aur.archlinux.org/snapd.git
+cd snapd
+makepkg -si
+sudo systemctl enable --now snapd.socket
+sudo ln -s /var/lib/snapd/snap /snap
 cd
 
 echo :::::::
