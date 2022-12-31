@@ -36,7 +36,7 @@ echo :::::::
 echo Installing Gnome Extensions
 sudo pacman -S --needed gnome-shell-extensions --noconfirm
 sudo pacman -S --needed libgtop lm_sensors gnome-icon-theme-symbolic gnome-icon-theme-git --noconfirm
-sudo yay -S --needed gnome-shell-extension-pop-shell --noconfirm
+yay -S --needed gnome-shell-extension-pop-shell --noconfirm
 
 echo :::::::
 echo Installing Random Apps
