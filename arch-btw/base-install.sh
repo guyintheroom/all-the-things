@@ -55,7 +55,11 @@ echo :::::::
 echo Installing Gnome Extensions
 sudo pacman -S --needed gnome-shell-extensions --noconfirm
 sudo pacman -S --needed libgtop lm_sensors gnome-icon-theme-symbolic gnome-icon-theme-git --noconfirm
-yay -S --needed gnome-shell-extension-pop-shell --noconfirm
+git clone https://aur.archlinux.org/gnome-browser-connector
+cd gnome-browser-connector
+makepkg -si --noconfirm
+cd
+# yay -S --needed gnome-shell-extension-pop-shell --noconfirm
 
 echo :::::::
 echo Installing Random Apps
