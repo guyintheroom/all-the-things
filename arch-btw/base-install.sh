@@ -8,6 +8,7 @@ echo Initial Things
 cd
 sudo pacman -Syu --noconfirm
 sudo pacman -S --needed base-devel git --noconfirm
+sudo pacman -S --needed gnome-terminal --noconfirm
 
 echo :::::::
 echo Installing Yay
@@ -15,6 +16,11 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si --noconfirm
 cd
+
+echo :::::::
+echo Importing Terminal Profile
+sudo pacman -S --needed dconf-editor --noconfirm
+dconf load /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/ < ~/all-the-things/config-files/terminal-profile.dconf
 
 echo :::::::
 echo Installing Google Drive Dependencies
@@ -25,7 +31,10 @@ echo Installing Chrome
 # Installing Gnome Keyring
 sudo pacman -S --needed seahorse --noconfirm
 # Chrome
-sudo pacman -S google-chrome --noconfirm
+git clone https://aur.archlinux.org/google-chrome.git
+cd google-chrome
+makepkg -si
+cd
 
 #echo :::::::
 #echo Removing Firefox

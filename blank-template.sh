@@ -1,8 +1,8 @@
 #!/bin/bash
-echo Blank Script
+echo Blank Template
 
 echo :::::::
+
 
 echo :::::::
 echo Job Done!!
-read
