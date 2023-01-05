@@ -5,7 +5,18 @@ echo Press the any key to continue
 read
 
 echo :::::::
-yay -S --needed gnome-shell-extension-pop-shell --noconfirm
+# Going Home
+cd
+
+# Installing Dependencies
+sudo pacman -S --needed git typescript make
+
+# Cloning Repo
+git clone https://github/pop-os/shell.git
+
+# Build Package
+cd shell
+make local-install
 
 echo :::::::
 echo Job Done!!
