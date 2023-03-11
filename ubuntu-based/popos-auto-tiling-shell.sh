@@ -1,5 +1,5 @@
 #!/bin/bash
-echo Ubuntu Specific Tweaks
+echo Auto Tiling Shell Install
 
 echo :::::::
 echo Installing Pop-OS Auto Tiling Shell

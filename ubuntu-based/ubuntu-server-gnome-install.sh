@@ -28,4 +28,3 @@ echo :::::::
 echo REBOOT IS REQUIRED!!
 echo :::::::
 echo Job Done!!
-read

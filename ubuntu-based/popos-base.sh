@@ -1,5 +1,5 @@
 #!/bin/bash
-echo Base Install - intended for any Ubuntu-based machine
+echo PopOS Base Install
 
 echo :::::::
 echo Initial Things
@@ -13,8 +13,6 @@ echo "deb https://deb.volian.org/volian/ scar main" | sudo tee /etc/apt/sources.
 wget -qO - https://deb.volian.org/volian/scar.key | sudo tee /etc/apt/trusted.gpg.d/volian-archive-scar-unstable.gpg > /dev/null
 sudo apt update
 sudo apt install nala -y
-echo pausing
-read
 
 echo :::::::
 echo Importing Terminal Profile
@@ -30,20 +28,14 @@ echo :::::::
 echo Removing Firefox
 sudo nala purge firefox -y
 sudo snap remove firefox
-echo pausing
-read
 
 echo :::::::
-echo Installing Gnome Extensions
-sudo nala install gnome-shell-extensions -y
-sudo nala install gir1.2-gtop-2.0 lm-sensors -y
-sudo nala install gnome-tweaks -y
-sudo nala install gnome-shell-extension-manager -y
+echo Disable Pop Shop on Startup
+sudo systemctl disable pop-upgrade.service
 
 echo :::::::
-echo Installing Random Apps
-sudo nala install neofetch pavucontrol mpv bashtop tldr trash-cli audacious rpi-imager
+echo Installing Snap
+sudo nala install snap
 
 echo :::::::
 echo Job Done!!
-read
