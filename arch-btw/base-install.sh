@@ -1,7 +1,5 @@
 #!/bin/bash
 echo Base Install - Arch-based machines running GNOME
-echo Press Any Key to Continue
-read
 
 echo :::::::
 echo Initial Things
@@ -37,10 +35,9 @@ echo Installing Google Drive Dependencies
 sudo pacman -S gnome-online-accounts gvfs-goa gvfs-google --noconfirm
 
 echo :::::::
-echo Installing Chrome
-# Installing Gnome Keyring
+echo Installing Gnome Keyring
 sudo pacman -S --needed seahorse --noconfirm
-# Chrome
+echo Installing Google Chrome
 git clone https://aur.archlinux.org/google-chrome.git
 cd google-chrome
 makepkg -si
