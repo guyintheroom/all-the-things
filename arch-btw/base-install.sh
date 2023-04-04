@@ -39,7 +39,7 @@ echo :::::::
 echo Gnome Terminal Things
 yay -S --needed gnome-terminal-transparency --noconfirm
 sudo pacman -S --needed dconf-editor --noconfirm
-dconf load /org/gnome/terminal/legacy/profiles:/:8aa705c8-b8fb-4516-a87c-0517f99b4c19/ < ~/all-the-things/config-files/arch-terminal-profile.dconf
+dconf load /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/ < ~/all-the-things/config-files/terminal-profile.dconf
 
 echo :::::::
 echo Installing Google Drive Dependencies
