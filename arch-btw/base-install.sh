@@ -34,6 +34,7 @@ echo :::::::
 echo Installing Icon Themes
 yay -S yaru-icon-theme --noconfirm
 yay -S bibata-cursor-theme --noconfirm
+yay -S se98-icon-theme-git --noconfirm
 
 echo :::::::
 echo Gnome Terminal Things
@@ -43,7 +44,7 @@ dconf load /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d
 
 echo :::::::
 echo Installing Google Drive Dependencies
-sudo pacman -S gnome-online-accounts gvfs-goa gvfs-google --noconfirm
+sudo pacman -S --needed gnome-online-accounts gvfs-goa gvfs-google --noconfirm
 
 echo :::::::
 echo Installing Gnome Keyring
@@ -74,7 +75,7 @@ cd
 echo :::::::
 echo Installing Random Apps
 sudo pacman -S --needed discord neofetch pavucontrol mpv --noconfirm
-
+yay -S --needed rpi-imager --noconfirm
 echo :::::::
 echo Job Done!!
 echo Reboot Needed!!
