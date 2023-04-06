@@ -5,7 +5,8 @@ read
 
 echo :::::::
 echo Installing Multimedia Things
-sudo pacman -S --needed audacious spotify-launcher plex-media-player --noconfirm
+sudo pacman -S --needed audacious spotify-launcher --noconfirm
+yay -S --needed plex-media-player --noconfirm
 
 echo :::::::
 echo Installing Editing Apps
