@@ -1,17 +1,17 @@
 #!/bin/bash
 echo Apps for Main Desktop!!
-echo Snap is required prior to running this script!!
-read
 
-echo :::::::
-echo Installing Multimedia Things
+# Installing Multimedia Things
 sudo pacman -S --needed audacious spotify-launcher --noconfirm
 yay -S --needed plex-media-player --noconfirm
 
-echo :::::::
-echo Installing Editing Apps
+# Installing Editing Apps
 sudo pacman -S --needed krita kdenlive ardour obs-studio --noconfirm
 
+# Bluetooth Things
+sudo pacman -S --needed bluez bluez-utils --noconfirm
+sudo systemctrl start bluetooth.service
+sudo systemctrl enable bluetooth.service
 
 echo Job Done!!
-read
+echo "Use blutoothctl to manage bluetooth devices"
