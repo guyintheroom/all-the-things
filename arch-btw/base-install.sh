@@ -25,18 +25,10 @@ cd
 sudo pacman -S --needed seahorse discord neofetch pavucontrol mpv inkscape --noconfirm
 yay -S --needed rpi-imager --noconfirm
 
-# Installing Fonts
-yay -S pop-fonts --noconfirm
-yay -S ttf-roboto-slabs --noconfirm
-yay -S ttf-ubuntu-font-family --noconfirm
+# Installing Necessary Fonts
 yay -S ttf-meslo-nerd-font-powerlevel10k --noconfirm
-read
-
-# Installing Icon Themes
-yay -S yaru-icon-theme --noconfirm
-yay -S bibata-cursor-theme --noconfirm
-yay -S se98-icon-theme-git --noconfirm
-yay -S elementary-icon-theme --noconfirm
+echo Font Install Complete
+echo Press Any Key to Continue
 read
 
 # Google Drive and Chrome
@@ -61,6 +53,8 @@ sudo pacman -S zsh
 yay -S --noconfirm zsh-theme-powerlevel10k-git
 echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 cp -rT ~/all-the-things/config-files/dot-files ~/
+echo Terminal Prep Complete
+echo Press Any Key to Continue
 read
 chsh -s /usr/bin/zsh
 
