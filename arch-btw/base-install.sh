@@ -49,7 +49,7 @@ yay -S --needed adw-gtk3 --noconfirm
 yay -S --needed gnome-terminal-transparency --noconfirm
 sudo pacman -S --needed dconf-editor --noconfirm
 dconf load /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/ < ~/all-the-things/config-files/gnome-terminal/arch.dconf
-sudo pacman -S zsh
+sudo pacman -S zsh --noconfirm
 yay -S --noconfirm zsh-theme-powerlevel10k-git
 echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 cp -rT ~/all-the-things/config-files/dot-files ~/
