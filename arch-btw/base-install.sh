@@ -27,9 +27,6 @@ yay -S --needed rpi-imager --noconfirm
 
 # Installing Necessary Fonts
 yay -S ttf-meslo-nerd-font-powerlevel10k --noconfirm
-echo Font Install Complete
-echo Press Any Key to Continue
-read
 
 # Google Drive and Chrome
 sudo pacman -S --needed gnome-online-accounts gvfs-goa gvfs-google --noconfirm
@@ -43,7 +40,9 @@ sudo pacman -R firefox --noconfirm
 sudo pacman -S --needed gnome-shell-extensions --noconfirm
 sudo pacman -S --needed libgtop lm_sensors gnome-icon-theme-symbolic gnome-icon-theme-git --noconfirm
 sudo pacman -S --needed gnome-tweaks --noconfirm
+sudo pacman -S --needed pacman-contrib --noconfirm
 yay -S --needed gnome-browser-connector --noconfirm
+yay -S --needed extension-manager
 
 # Terminal Things
 yay -S --needed gnome-terminal-transparency --noconfirm
