@@ -42,7 +42,7 @@ sudo pacman -S --needed libgtop lm_sensors gnome-icon-theme-symbolic gnome-icon-
 sudo pacman -S --needed gnome-tweaks --noconfirm
 sudo pacman -S --needed pacman-contrib --noconfirm
 yay -S --needed gnome-browser-connector --noconfirm
-yay -S --needed extension-manager
+yay -S --needed extension-manager --noconfirm
 
 # Terminal Things
 yay -S --needed gnome-terminal-transparency --noconfirm
