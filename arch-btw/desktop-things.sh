@@ -2,7 +2,7 @@
 echo Apps for Main Desktop!!
 
 # Installing Multimedia Things
-sudo pacman -S --needed audacious spotify-launcher --noconfirm
+sudo pacman -S --needed audacious spotify-launcher yt-dlp --noconfirm
 yay -S --needed plex-media-player --noconfirm
 
 # Installing Editing Apps

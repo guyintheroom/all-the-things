@@ -52,6 +52,7 @@ dconf load /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d
 sudo pacman -S zsh --noconfirm
 yay -S --noconfirm zsh-theme-powerlevel10k-git
 echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+yay -S --noconfirm pokemon-colorscripts-git
 cp -rT ~/all-the-things/config-files/dot-files ~/
 echo Terminal Prep Complete
 echo Press Any Key to Continue
