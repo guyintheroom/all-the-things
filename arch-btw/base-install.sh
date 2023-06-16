@@ -25,7 +25,7 @@ sudo ln -s /var/lib/snapd/snap /snap
 cd
 
 # Installing Misc Apps
-sudo pacman -S --needed seahorse neofetch discord pavucontrol mpv inkscape vlc yt-dlp archlinux-wallpaper --noconfirm
+sudo pacman -S --needed seahorse neofetch discord pavucontrol mpv inkscape vlc yt-dlp archlinux-wallpaper unrar --noconfirm
 yay -S --needed rpi-imager --noconfirm
 
 # Installing Necessary Fonts
