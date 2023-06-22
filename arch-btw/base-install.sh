@@ -6,6 +6,7 @@ cd
 sudo pacman -Syu --noconfirm
 sudo pacman -S --needed base-devel git --noconfirm
 git config --global core.editor nano
+gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 
 # Changing MAKEPKG to use all threads
 sudo cp -rT ~/all-the-things/config-files/arch/makepkg.conf /etc/makepkg.conf
@@ -54,7 +55,7 @@ sudo pacman -S --needed dconf-editor --noconfirm
 dconf load /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/ < ~/all-the-things/config-files/arch/gnome-terminal-arch.dconf
 sudo pacman -S zsh --noconfirm
 yay -S --noconfirm zsh-theme-powerlevel10k-git
-echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+# echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 yay -S --noconfirm pokemon-colorscripts-git
 cp -rT ~/all-the-things/config-files/dot-files ~/
 echo Terminal Prep Complete
