@@ -18,7 +18,7 @@ makepkg -si --noconfirm
 cd
 
 # Installing Misc Apps
-sudo pacman -S --needed seahorse neofetch discord pavucontrol mpv inkscape vlc yt-dlp archlinux-wallpaper unrar --noconfirm
+sudo pacman -S --needed seahorse neofetch discord pavucontrol inkscape vlc yt-dlp archlinux-wallpaper unrar --noconfirm
 yay -S --needed rpi-imager --noconfirm
 
 # Installing Necessary Fonts
@@ -27,10 +27,6 @@ yay -S ttf-meslo-nerd-font-powerlevel10k --noconfirm
 # Google Drive and Chrome
 sudo pacman -S --needed gnome-online-accounts gvfs-goa gvfs-google --noconfirm
 yay -S --needed google-chrome --noconfirm
-
-# Removing Firefox
-sudo pacman -R firefox-gnome-theme-maia --noconfirm
-sudo pacman -R firefox --noconfirm
 
 # Gnome Extensions
 sudo pacman -S --needed gnome-shell-extensions --noconfirm
@@ -53,9 +49,12 @@ cp -rT ~/all-the-things/config-files/arch/dot-files/alacritty.yml ~/.config/alac
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Plugins and Dot-Files
+read
 oh-my-zsh-git zsh-fzf-plugin-git oh-my-zsh-plugin-syntax-highlighting oh-my-zsh-plugin-autosuggestions pokemon-colorscripts-git --noconfirm
+read
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-#cp -rT ~/all-the-things/config-files/arch/dot-files/.zshrc ~/.zshrc
+read
+cp -rT ~/all-the-things/config-files/arch/dot-files/.zshrc ~/.zshrc
 echo Terminal Prep Complete
 echo Press Any Key to Continue
 read
