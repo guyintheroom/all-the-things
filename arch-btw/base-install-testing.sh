@@ -42,10 +42,20 @@ yay -S --needed extension-manager --noconfirm
 yay -S --needed adw-gtk3 --noconfirm
 
 # Terminal Things
+
+# Pre-Reqs and Terminal Emulator
 sudo pacman -S alacritty zsh zsh-completions --noconfirm
-yay -S alacritty-themes oh-my-zsh-git zsh-fsf-plugin-git oh-my-zsh-plugin-syntax-highlighting oh-my-zsh-plugin-autosuggestions pokemon-colorscripts-git --noconfirm
+yay -S alacritty-themes --noconfirm
+mkdir ~/.config/alacritty
+cp -rT ~/all-the-things/config-files/arch/dot-files/alacritty.yml ~/.config/alacritty/alacritty.yml
+
+# Oh My Zsh Install
+sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Plugins and Dot-Files
+oh-my-zsh-git zsh-fzf-plugin-git oh-my-zsh-plugin-syntax-highlighting oh-my-zsh-plugin-autosuggestions pokemon-colorscripts-git --noconfirm
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-#cp -rT ~/all-the-things/config-files/arch/dot-files/alacritty.yml ~/.config/alacritty/alacritty.yml
+#cp -rT ~/all-the-things/config-files/arch/dot-files/.zshrc ~/.zshrc
 echo Terminal Prep Complete
 echo Press Any Key to Continue
 read
