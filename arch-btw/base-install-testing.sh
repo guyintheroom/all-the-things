@@ -45,7 +45,7 @@ yay -S --needed adw-gtk3 --noconfirm
 sudo pacman -S alacritty zsh zsh-completions --noconfirm
 yay -S alacritty-themes oh-my-zsh-git zsh-fsf-plugin-git oh-my-zsh-plugin-syntax-highlighting oh-my-zsh-plugin-autosuggestions pokemon-colorscripts-git --noconfirm
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-cp -rT ~/all-the-things/config-files/arch/dot-files/alacritty.yml ~/.config/alacritty/
+#cp -rT ~/all-the-things/config-files/arch/dot-files/alacritty.yml ~/.config/alacritty/alacritty.yml
 echo Terminal Prep Complete
 echo Press Any Key to Continue
 read
