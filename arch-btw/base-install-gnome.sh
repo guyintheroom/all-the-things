@@ -37,7 +37,7 @@ yay -S --needed gnome-browser-connector --noconfirm
 yay -S --needed extension-manager --noconfirm
 yay -S --needed adw-gtk3 --noconfirm
 
-# Terminal Things
+# Terminal Witchcraft!
 
 # Pre-Reqs and Emulator
 sudo pacman -S alacritty zsh zsh-completions --noconfirm
@@ -68,5 +68,5 @@ chsh -s /usr/bin/zsh
 
 echo :::::::
 echo Job Done!!
-echo Reboot Needed!!
+echo Reboot Required!!
 echo :::::::

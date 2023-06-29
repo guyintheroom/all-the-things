@@ -1,5 +1,5 @@
 #!/bin/bash
-echo Apps for Main Desktop!!
+echo Extra Apps for Main Desktop!!
 
 # Installing Multimedia Things
 sudo pacman -S --needed audacious spotify-launcher yt-dlp --noconfirm
@@ -7,6 +7,9 @@ yay -S --needed plex-media-player --noconfirm
 
 # Installing Editing Apps
 sudo pacman -S --needed krita kdenlive ardour obs-studio --noconfirm
+
+# Installing Misc apps
+yay -S --needed drawio-desktop-bin --noconfirm
 
 # Bluetooth Things
 sudo pacman -S --needed bluez bluez-utils --noconfirm
