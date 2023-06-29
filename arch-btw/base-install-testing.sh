@@ -9,7 +9,7 @@ git config --global core.editor nano
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 
 # Changing MAKEPKG to use all threads
-sudo cp -rT ~/all-the-things/config-files/arch/makepkg.conf /etc/makepkg.conf
+sudo cp -rT ~/all-the-things/config-files/dot-files/makepkg.conf /etc/makepkg.conf
 
 # Installing Yay
 git clone https://aur.archlinux.org/yay.git
@@ -39,26 +39,32 @@ yay -S --needed adw-gtk3 --noconfirm
 
 # Terminal Things
 
-# Pre-Reqs and Terminal Emulator
+# Pre-Reqs and Emulator
 sudo pacman -S alacritty zsh zsh-completions --noconfirm
 yay -S alacritty-themes --noconfirm
 mkdir ~/.config/alacritty
-cp -rT ~/all-the-things/config-files/arch/dot-files/alacritty.yml ~/.config/alacritty/alacritty.yml
+cp -rT ~/all-the-things/config-files/dot-files/alacritty.yml ~/.config/alacritty/alacritty.yml
 
-# Oh My Zsh Install
-sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# Plugins
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.config/zsh-plugins/powerlevel10k
+echo 'source ~/.config/zsh-plugins/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 
-# Plugins and Dot-Files
+git clone https://github.com/zdharma-continuum/fast-syntax-highlighting ~/.config/zsh-plugins/fsh
+echo 'source ~/.config/zsh-plugins/fsh/fast-syntax-highlighting.plugin.zsh' >>~/.zshrc
+
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.config/zsh-plugins/zsh-autosuggestions
+echo 'source ~/.config/zsh-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh' >>~/.zshrc
+
+yay -S pokemon-colorscripts-git --noconfirm
+
+# Dot Files
+cp -rT ~/all-the-things/config-files/dot-files/.p10k.zsh ~/.p10k.zsh
+cp -rT ~/all-the-things/config-files/dot-files/.zshrc ~/.zshrc
+
+echo Changing from Bash to ZSH
+echo Password is required to continue:
 read
-oh-my-zsh-git zsh-fzf-plugin-git oh-my-zsh-plugin-syntax-highlighting oh-my-zsh-plugin-autosuggestions pokemon-colorscripts-git --noconfirm
-read
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-read
-cp -rT ~/all-the-things/config-files/arch/dot-files/.zshrc ~/.zshrc
-echo Terminal Prep Complete
-echo Press Any Key to Continue
-read
-#chsh -s /usr/bin/zsh
+chsh -s /usr/bin/zsh
 
 echo :::::::
 echo Job Done!!
