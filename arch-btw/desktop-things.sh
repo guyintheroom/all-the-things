@@ -1,20 +1,22 @@
 #!/bin/bash
-echo Extra Apps for Main Desktop!!
+echo # Extra Apps for Main Desktop!!
 
-# Installing Multimedia Things
+echo # Installing Multimedia Things
 sudo pacman -S --needed audacious spotify-launcher yt-dlp --noconfirm
 yay -S --needed plex-media-player --noconfirm
 
-# Installing Editing Apps
+echo # Installing Editing Apps
 sudo pacman -S --needed krita kdenlive ardour obs-studio --noconfirm
 
-# Installing Misc apps
+echo # Installing Misc apps
 yay -S --needed drawio-desktop-bin --noconfirm
 
-# Bluetooth Things
+echo # Bluetooth Things
 sudo pacman -S --needed bluez bluez-utils --noconfirm
 sudo systemctrl start bluetooth.service
 sudo systemctrl enable bluetooth.service
 
-echo Job Done!!
-echo "Use blutoothctl to manage bluetooth devices"
+echo # :::::::
+echo # Job Done!!
+echo # Use blutoothctl to manage bluetooth devices
+echo # :::::::
