@@ -47,14 +47,8 @@ cp -rT ~/all-the-things/config-files/dot-files/alacritty.yml ~/.config/alacritty
 
 # Plugins
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.config/zsh-plugins/powerlevel10k
-echo 'source ~/.config/zsh-plugins/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
-
 git clone https://github.com/zdharma-continuum/fast-syntax-highlighting ~/.config/zsh-plugins/fsh
-echo 'source ~/.config/zsh-plugins/fsh/fast-syntax-highlighting.plugin.zsh' >>~/.zshrc
-
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.config/zsh-plugins/zsh-autosuggestions
-echo 'source ~/.config/zsh-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh' >>~/.zshrc
-
 yay -S pokemon-colorscripts-git --noconfirm
 
 # Dot Files
