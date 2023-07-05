@@ -1,7 +1,7 @@
 #!/bin/bash
 echo # Installing Wireguard
 
-sudo pacman -S wireguard openresolv --noconfirm
+sudo pacman -S wireguard-tools openresolv --noconfirm
 
 echo # :::::::
 echo # Job Done!!
