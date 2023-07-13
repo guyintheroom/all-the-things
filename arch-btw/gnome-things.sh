@@ -1,6 +1,9 @@
 #!/bin/bash
 echo # Installs GNOME Specific Things
 
+echo # Gnome Google Stuff
+sudo pacman -S seahorse gnome-online-accounts gvfs-goa gvfs-google --noconfirm
+
 echo # Gnome Theme Things
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 

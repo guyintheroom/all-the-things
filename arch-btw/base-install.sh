@@ -4,7 +4,7 @@ echo # Base Install for Arch Machines
 echo # Initial Things
 cd
 sudo pacman -Syu --noconfirm
-sudo pacman -S --needed base-devel git --noconfirm
+sudo pacman -S --needed base-devel git pacman-contrib --noconfirm
 git config --global core.editor nano
 
 echo # Changing MAKEPKG to use all threads
@@ -16,21 +16,14 @@ cd yay
 makepkg -si --noconfirm
 cd
 
-echo # Installing Misc Apps
-sudo pacman -S --needed seahorse neofetch discord pavucontrol inkscape vlc yt-dlp archlinux-wallpaper unrar --noconfirm
-yay -S --needed rpi-imager --noconfirm
-
-echo # Installing Necessary Fonts
-yay -S ttf-meslo-nerd-font-powerlevel10k --noconfirm
-
-echo # Google Drive and Chrome
-sudo pacman -S --needed gnome-online-accounts gvfs-goa gvfs-google --noconfirm
-yay -S --needed google-chrome --noconfirm
+echo # Installing Basic Apps
+sudo pacman -S --needed neofetch discord pavucontrol inkscape vlc yt-dlp archlinux-wallpaper unrar --noconfirm
+yay -S --needed google-chrome rpi-imager --noconfirm
 
 echo # Terminal Witchcraft!
 echo # Pre-Reqs and Emulator
 sudo pacman -S alacritty zsh zsh-completions --noconfirm
-yay -S alacritty-themes --noconfirm
+yay -S alacritty-themes ttf-meslo-nerd-font-powerlevel10k --noconfirm
 mkdir ~/.config/alacritty
 cp -rT ~/all-the-things/config-files/dot-files/alacritty.yml ~/.config/alacritty/alacritty.yml
 
