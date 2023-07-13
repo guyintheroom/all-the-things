@@ -13,10 +13,9 @@ yay -S --needed drawio-desktop-bin --noconfirm
 
 echo # Bluetooth Things
 sudo pacman -S --needed bluez bluez-utils --noconfirm
-sudo systemctrl start bluetooth.service
-sudo systemctrl enable bluetooth.service
+sudo systemctl start bluetooth.service
+sudo systemctl enable bluetooth.service
 
-echo # :::::::
-echo # Job Done!!
-echo # Use blutoothctl to manage bluetooth devices
-echo # :::::::
+echo :::::::
+echo Job Done!!
+echo :::::::

@@ -44,12 +44,12 @@ echo # Dot Files
 cp -rT ~/all-the-things/config-files/dot-files/.p10k.zsh ~/.p10k.zsh
 cp -rT ~/all-the-things/config-files/dot-files/.zshrc ~/.zshrc
 
-echo # Changing from Bash to ZSH
-echo # Password is required to continue:
+echo Changing from Bash to ZSH
+echo Password is required to continue:
 read
 chsh -s /usr/bin/zsh
 
-echo # :::::::
-echo # Job Done!!
-echo # Reboot Required!!
-echo # :::::::
+echo :::::::
+echo Job Done!!
+echo Reboot Required!!
+echo :::::::
