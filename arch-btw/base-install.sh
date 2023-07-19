@@ -22,7 +22,7 @@ yay -S --needed google-chrome rpi-imager --noconfirm
 
 echo # Terminal Witchcraft!
 echo # Pre-Reqs and Emulator
-sudo pacman -S alacritty zsh zsh-completions --noconfirm
+sudo pacman -S alacritty zsh zsh-completions tldr --noconfirm
 yay -S alacritty-themes ttf-meslo-nerd-font-powerlevel10k --noconfirm
 mkdir ~/.config/alacritty
 cp -rT ~/all-the-things/config-files/dot-files/alacritty.yml ~/.config/alacritty/alacritty.yml
@@ -38,7 +38,7 @@ cp -rT ~/all-the-things/config-files/dot-files/.p10k.zsh ~/.p10k.zsh
 cp -rT ~/all-the-things/config-files/dot-files/.zshrc ~/.zshrc
 
 echo Changing from Bash to ZSH
-echo Password is required to continue:
+echo Password is required, press any key to continue:
 read
 chsh -s /usr/bin/zsh
 
