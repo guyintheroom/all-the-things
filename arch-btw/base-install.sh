@@ -17,7 +17,7 @@ makepkg -si --noconfirm
 cd
 
 echo # Installing Basic Apps
-sudo pacman -S --needed neofetch discord pavucontrol inkscape vlc yt-dlp archlinux-wallpaper unrar --noconfirm
+sudo pacman -S --needed neofetch discord pavucontrol inkscape vlc yt-dlp archlinux-wallpaper unrar timeshift --noconfirm
 yay -S --needed google-chrome rpi-imager --noconfirm
 
 echo # Terminal Witchcraft!
