@@ -9,6 +9,7 @@ echo # Installing Editing Apps
 sudo pacman -S --needed krita kdenlive ardour obs-studio --noconfirm
 
 echo # Installing Misc apps
+sudo pacman -S --needed bitwarden --noconfirm
 yay -S --needed drawio-desktop-bin --noconfirm
 
 echo # Bluetooth Things
