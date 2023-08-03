@@ -16,8 +16,10 @@ source ~/.config/zsh-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 pokemon-colorscripts -r 1 --no-title
 
 # Aliases
-alias vpn-up="sudo wg-quick up wg0"
-alias vpn-down="sudo wg-quick down wg0"
+alias vpn0-up="sudo wg-quick up wg0"
+alias vpn0-down="sudo wg-quick down wg0"
+alias vpn1-up="sudo wg-quick up wg1"
+alias vpn1-down="sudo wg-quick down wg1"
 alias pokemans="pokemon-colorscripts -r"
 alias theme="alacritty-themes"
 alias p10k="p10k configure"
