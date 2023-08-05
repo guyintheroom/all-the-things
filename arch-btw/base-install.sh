@@ -13,7 +13,9 @@ sudo cp -rT ~/all-the-things/config-files/dot-files/makepkg.conf /etc/makepkg.co
 
 echo # Installing Yay
 git clone https://aur.archlinux.org/yay.git ~/.builds/yay
-makepkg ~/.builds/yay -si --noconfirm
+cd ~/.builds/yay
+makepkg -si --noconfirm
+cd
 
 echo # Installing Basic Apps
 sudo pacman -S --needed neofetch discord pavucontrol inkscape vlc yt-dlp archlinux-wallpaper unrar --noconfirm

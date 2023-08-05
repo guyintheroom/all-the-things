@@ -18,7 +18,9 @@ yay -S --needed adw-gtk3 --noconfirm
 
 echo # ArcMenu Install
 git clone https://gitlab.com/arcmenu/ArcMenu.git ~/.builds/ArcMenu
-make ~/.builds/ArcMenu/install --noconfirm
+cd ~/.builds/ArcMenu
+make install --noconfirm
+cd
 
 echo # :::::::
 echo # Job Done!!
