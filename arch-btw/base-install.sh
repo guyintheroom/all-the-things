@@ -3,6 +3,7 @@ echo # Base Install for Arch Machines
 
 echo # Initial Things
 cd
+mkdir ~/.builds
 sudo pacman -Syu --noconfirm
 sudo pacman -S --needed base-devel git pacman-contrib --noconfirm
 git config --global core.editor nano
@@ -11,10 +12,8 @@ echo # Changing MAKEPKG to use all threads
 sudo cp -rT ~/all-the-things/config-files/dot-files/makepkg.conf /etc/makepkg.conf
 
 echo # Installing Yay
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si --noconfirm
-cd
+git clone https://aur.archlinux.org/yay.git ~/.builds/yay
+makepkg ~/.builds/yay -si --noconfirm
 
 echo # Installing Basic Apps
 sudo pacman -S --needed neofetch discord pavucontrol inkscape vlc yt-dlp archlinux-wallpaper unrar --noconfirm
@@ -38,7 +37,7 @@ cp -rT ~/all-the-things/config-files/dot-files/.p10k.zsh ~/.p10k.zsh
 cp -rT ~/all-the-things/config-files/dot-files/.zshrc ~/.zshrc
 
 echo Changing from Bash to ZSH
-echo Password is required, press any key to continue:
+echo Enter password at next step, press any key to continue:
 read
 chsh -s /usr/bin/zsh
 

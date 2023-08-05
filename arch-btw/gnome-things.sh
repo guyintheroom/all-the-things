@@ -16,6 +16,10 @@ yay -S --needed gnome-browser-connector --noconfirm
 yay -S --needed extension-manager --noconfirm
 yay -S --needed adw-gtk3 --noconfirm
 
+echo # ArcMenu Install
+git clone https://gitlab.com/arcmenu/ArcMenu.git ~/.builds/ArcMenu
+make ~/.builds/ArcMenu/install --noconfirm
+
 echo # :::::::
 echo # Job Done!!
 echo # :::::::
