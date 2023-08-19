@@ -1,7 +1,7 @@
 #!/bin/bash
-echo # Base Install for Arch Machines
+# Base Install for Arch Machines
 
-echo # Initial Things
+# Initial Things
 cd
 mkdir ~/.builds
 sudo cp -rT ~/all-the-things/config-files/dot-files/pacman.conf /etc/pacman.conf
@@ -10,31 +10,31 @@ sudo pacman -Syu --noconfirm
 sudo pacman -S --needed base-devel git pacman-contrib --noconfirm
 git config --global core.editor nano
 
-echo # Installing Yay
+# Installing Yay
 git clone https://aur.archlinux.org/yay.git ~/.builds/yay
 cd ~/.builds/yay
 makepkg -si --noconfirm
 cd
 
-echo # Installing Basic Apps
+# Installing Basic Apps
 sudo pacman -S --needed neofetch discord pavucontrol inkscape vlc yt-dlp archlinux-wallpaper unrar --noconfirm
 yay -S --needed google-chrome rpi-imager timeshift --noconfirm
 cp -rT ~/all-the-things/yt-dl/ ~/Downloads/yt-dl/
 
-echo # Terminal Witchcraft!
-echo # Pre-Reqs and Emulator
-sudo pacman -S alacritty zsh zsh-completions tldr --noconfirm
+# Terminal Witchcraft!
+# Pre-Reqs and Emulator
+sudo pacman -S --needed alacritty zsh zsh-completions tldr --noconfirm
 yay -S alacritty-themes ttf-meslo-nerd-font-powerlevel10k --noconfirm
 mkdir ~/.config/alacritty
 cp -rT ~/all-the-things/config-files/dot-files/alacritty.yml ~/.config/alacritty/alacritty.yml
 
-echo # Plugins
+# Plugins
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.config/zsh-plugins/powerlevel10k
 git clone https://github.com/zdharma-continuum/fast-syntax-highlighting ~/.config/zsh-plugins/fsh
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.config/zsh-plugins/zsh-autosuggestions
 yay -S pokemon-colorscripts-git --noconfirm
 
-echo # Dot Files
+# Dot Files
 cp -rT ~/all-the-things/config-files/dot-files/.p10k.zsh ~/.p10k.zsh
 cp -rT ~/all-the-things/config-files/dot-files/.zshrc ~/.zshrc
 
@@ -44,6 +44,6 @@ read
 chsh -s /usr/bin/zsh
 
 echo :::::::
-echo Job Done!!
-echo Reboot Required!!
+echo Job Done!
+echo Reboot Required!
 echo :::::::
