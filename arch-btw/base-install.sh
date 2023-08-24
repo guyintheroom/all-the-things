@@ -18,7 +18,7 @@ cd
 
 # Installing Basic Apps
 sudo pacman -S --needed neofetch discord pavucontrol inkscape vlc yt-dlp archlinux-wallpaper unrar --noconfirm
-yay -S --needed google-chrome rpi-imager timeshift --noconfirm
+yay -S --needed google-chrome rpi-imager timeshift mission-center --noconfirm
 cp -rT ~/all-the-things/yt-dl/ ~/Downloads/yt-dl/
 
 # Terminal Witchcraft!

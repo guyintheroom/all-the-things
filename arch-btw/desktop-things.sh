@@ -6,7 +6,7 @@ sudo pacman -S --needed audacious spotify-launcher yt-dlp --noconfirm
 yay -S --needed plex-media-player --noconfirm
 
 echo # Installing Editing Apps
-sudo pacman -S --needed pinta krita kdenlive ardour obs-studio --noconfirm
+sudo pacman -S --needed pinta krita kdenlive ardour obs-studio flowblade --noconfirm
 
 echo # Installing Misc apps
 sudo pacman -S --needed bitwarden --noconfirm
