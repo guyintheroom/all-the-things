@@ -1,8 +1,9 @@
 #!/bin/bash
 echo # Installing Themes
 
-echo # Copying Images to non-user location
+echo # Copying Images to location
 sudo cp -rT ~/all-the-things/images/wallpapers /usr/share/backgrounds/my-wallpapers
+cp -rT ~/all-the-things/images/wallpapers ~/.local/share/backgrounds
 sudo cp -rT ~/all-the-things/images/icons /usr/share/backgrounds/icons
 
 echo # Installing Fonts
