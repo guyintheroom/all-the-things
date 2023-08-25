@@ -4,6 +4,7 @@
 # Initial Things
 cd
 mkdir ~/.builds
+sudo mkdir /mnt/shares
 sudo cp -rT ~/all-the-things/config-files/dot-files/pacman.conf /etc/pacman.conf
 sudo cp -rT ~/all-the-things/config-files/dot-files/makepkg.conf /etc/makepkg.conf
 sudo pacman -Syu --noconfirm
@@ -17,8 +18,8 @@ makepkg -si --noconfirm
 cd
 
 # Installing Basic Apps
-sudo pacman -S --needed neofetch discord pavucontrol inkscape vlc yt-dlp archlinux-wallpaper unrar grsync --noconfirm
-yay -S --needed google-chrome rpi-imager timeshift mission-center --noconfirm
+sudo pacman -S --needed neofetch discord pavucontrol inkscape vlc yt-dlp archlinux-wallpaper unrar --noconfirm
+yay -S --needed google-chrome rpi-imager timeshift mission-center mkinitcpio-firmware --noconfirm
 cp -rT ~/all-the-things/yt-dl/ ~/Downloads/yt-dl/
 
 # Terminal Witchcraft!
