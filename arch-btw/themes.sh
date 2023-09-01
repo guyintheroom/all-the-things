@@ -14,6 +14,8 @@ yay -S ttf-ubuntu-font-family --noconfirm
 echo # Installing Icon Themes
 yay -S yaru-icon-theme --noconfirm
 yay -S bibata-cursor-theme --noconfirm
+yay -S vimix-gtk-themes-git --noconfirm
+yay -S vimix-icon-theme --noconfirm
 
 echo # :::::::
 echo # Job Done!!
