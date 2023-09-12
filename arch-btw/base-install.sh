@@ -18,8 +18,8 @@ makepkg -si --noconfirm
 cd
 
 # Installing Basic Apps
-sudo pacman -S --needed neofetch discord pavucontrol inkscape vlc yt-dlp archlinux-wallpaper unrar --noconfirm
-yay -S --needed google-chrome rpi-imager timeshift mission-center mkinitcpio-firmware --noconfirm
+sudo pacman -S --needed neofetch discord pavucontrol inkscape vlc yt-dlp archlinux-wallpaper unrar arch-audit speedtest-cli --noconfirm
+yay -S --needed google-chrome rpi-imager timeshift mission-center mkinitcpio-firmware downgrade --noconfirm
 cp -rT ~/all-the-things/yt-dl/ ~/Downloads/yt-dl/
 
 # Terminal Witchcraft!
