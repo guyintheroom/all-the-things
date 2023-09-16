@@ -3,6 +3,7 @@
 
 # Initial Things
 cd
+mkdir ~./builds
 sudo apt update
 sudo apt upgrade -y
 

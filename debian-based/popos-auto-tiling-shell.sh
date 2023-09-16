@@ -1,27 +1,17 @@
 #!/bin/bash
-echo Auto Tiling Shell Install
+# Auto Tiling Shell Install
 
-echo :::::::
-echo Installing Pop-OS Auto Tiling Shell
-echo This may cause gnome to crash
-sudo nala install node-typescript make git -y
+# Installing Pop-OS Auto Tiling Shell and Shortcuts - This may cause Gnome to crash
 cd
-git clone https://github.com/pop-os/shell
-cd shell
+sudo nala install node-typescript make git cargo libgtk-3-dev rustc -y
+git clone https://github.com/pop-os/shell ~./builds/pop-os-shell
+git clone https://github.com/pop-os/shell-shortcuts ~./builds/pop-os-shell-shortcuts
+cd ~./builds/pop-os-shell
 make local-install
-cd
-cd install-repo-debian
-
-echo :::::::
-echo Installing Pop-OS Shell Shortcuts
-sudo nala install cargo libgtk-3-dev rustc -y
-cd
-git clone https://github.com/pop-os/shell-shortcuts
-cd shell-shortcuts
+pause
+cd ~./builds/pop-os-shell-shortcuts
 sudo make install
-cd
-cd install-repo-debian
 
 echo :::::::
-echo Job Done!!
-read
+echo Job Done!
+echo :::::::
