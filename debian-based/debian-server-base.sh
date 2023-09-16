@@ -8,9 +8,8 @@ sudo apt upgrade -y
 
 # Installing Basic Apps
 sudo apt install nala -y
-sudo nala install neofetch timeshift curl docker.io
+sudo nala install neofetch timeshift curl docker.io -y
 
 echo :::::::
 echo Job Done!
-echo Reboot Required!
 echo :::::::
