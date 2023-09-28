@@ -18,7 +18,7 @@ makepkg -si --noconfirm
 cd
 
 # Installing Basic Apps
-sudo pacman -S --needed neofetch discord pavucontrol inkscape vlc yt-dlp archlinux-wallpaper unrar arch-audit speedtest-cli --noconfirm
+sudo pacman -S --needed neofetch discord pavucontrol inkscape vlc yt-dlp archlinux-wallpaper unrar arch-audit speedtest-cli thefuck --noconfirm
 yay -S --needed google-chrome rpi-imager timeshift mission-center mkinitcpio-firmware downgrade rate-mirrors-bin --noconfirm
 cp -rT ~/all-the-things/yt-dl/ ~/Downloads/yt-dl/
 

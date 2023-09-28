@@ -20,6 +20,7 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 source ~/.config/zsh-plugins/fsh/fast-syntax-highlighting.plugin.zsh
 source ~/.config/zsh-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 pokemon-colorscripts -r 1 --no-title
+eval $(thefuck --alias)
 
 # Aliases
 alias vpn-up="sudo wg-quick up wg0"
