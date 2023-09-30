@@ -38,6 +38,8 @@ yay -S pokemon-colorscripts-git --noconfirm
 # Dot Files
 cp -rT ~/all-the-things/config-files/dot-files/.p10k.zsh ~/.p10k.zsh
 cp -rT ~/all-the-things/config-files/dot-files/.zshrc ~/.zshrc
+cp -rT ~/all-the-things/config-files/dot-files/.bashrc ~/.bashrc
+cp -rT ~/all-the-things/config-files/dot-files/.aliases ~/.aliases
 
 echo Changing from Bash to ZSH
 echo Script Paused - Password Needed During Next Step:
