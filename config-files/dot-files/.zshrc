@@ -4,6 +4,7 @@
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+source $HOME/.aliases
 
 # History
 HISTFILE=~/.zsh_history
@@ -20,21 +21,3 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 source ~/.config/zsh-plugins/fsh/fast-syntax-highlighting.plugin.zsh
 source ~/.config/zsh-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 pokemon-colorscripts -r 1 --no-title
-eval $(thefuck --alias)
-
-# Aliases
-alias vpn-up="sudo wg-quick up wg0"
-alias vpn-down="sudo wg-quick down wg0"
-alias vpnb-up="sudo wg-quick up wg1"
-alias vpnb-down="sudo wg-quick down wg1"
-alias safe-yay="sudo timeshift --create --comments update && yay"
-alias pokemans="pokemon-colorscripts -r"
-alias theme="alacritty-themes"
-alias p10k="p10k configure"
-alias ls="ls --color=auto --human-readable -F"
-alias ll="ls -al"
-alias birthday="stat -c %w /"
-alias zsh-pull="cp -rT ~/all-the-things/config-files/dot-files/.zshrc ~/.zshrc && zsh"
-alias rate-mirrors="rate-mirrors arch | sudo tee /etc/pacman.d/mirrorlist && clear && echo Mirrors Have Been Rated and Updated!"
-alias cat="bat --style=plain --paging=never"
-alias aliases="grep alias ~/.zshrc"
