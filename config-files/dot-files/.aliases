@@ -1,10 +1,9 @@
-# Aliases
+# General Aliases
+eval $(thefuck --alias)
 alias vpn-up="sudo wg-quick up wg0"
 alias vpn-down="sudo wg-quick down wg0"
 alias vpnb-up="sudo wg-quick up wg1"
 alias vpnb-down="sudo wg-quick down wg1"
-alias safe-yay="sudo timeshift --create --comments update && yay"
-alias safe-nala="sudo timeshift --create --comments update && sudo nala update && sudo nala upgrade"
 alias grep="grep --color=auto"
 alias pokemans="pokemon-colorscripts -r"
 alias theme="alacritty-themes"
@@ -12,9 +11,21 @@ alias p10k="p10k configure"
 alias ls="ls --color=auto --human-readable -F"
 alias ll="ls -al"
 alias birthday="stat -c %w /"
+alias cat="bat --style=plain --paging=never"
+alias show-aliases="cat ~/.aliases"
+
+# Arch Specific
+alias rate-mirrors="rate-mirrors arch | sudo tee /etc/pacman.d/mirrorlist && clear && echo Mirrors Have Been Rated and Updated!"
+alias safe-yay="sudo timeshift --create --comments update && yay"
+
+# Debian Specific
+alias safe-nala="sudo timeshift --create --comments update && sudo nala update && sudo nala upgrade"
+
+# Terminal Github Updating
 alias zsh-pull="cp -rT ~/all-the-things/config-files/dot-files/.zshrc ~/.zshrc && alias-pull && zsh"
 alias bash-pull="cp -rT ~/all-the-things/config-files/dot-files/.bashrc ~/.bashrc && alias-pull && bash"
 alias alias-pull="cp -rT ~/all-the-things/config-files/dot-files/.aliases ~/.aliases"
-alias rate-mirrors="rate-mirrors arch | sudo tee /etc/pacman.d/mirrorlist && clear && echo Mirrors Have Been Rated and Updated!"
-alias cat="bat --style=plain --paging=never"
-eval $(thefuck --alias)
+
+# Setting Default Terminal
+alias default-zsh="chsh -s /usr/bin/zsh && echo Full Logout is Required!"
+alias default-bash="chsh -s /usr/bin/bash && echo Full Logout is Required!"
