@@ -7,6 +7,9 @@ sudo pacman -S --needed seahorse gnome-online-accounts gvfs-goa gvfs-google --no
 # Gnome Theme Things
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 
+# Nautilus Thumbnail Generation
+sudo pacman -S --needed ffmpegthumbnailer gst-libav --noconfirm
+
 # Gnome Extensions
 sudo pacman -S --needed gnome-shell-extensions --noconfirm
 sudo pacman -S --needed libgtop lm_sensors gnome-icon-theme-symbolic gnome-icon-theme-git --noconfirm
