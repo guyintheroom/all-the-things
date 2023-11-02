@@ -8,7 +8,7 @@ sudo cp -rT ~/all-the-things/images/icons /usr/share/backgrounds/icons
 
 echo # Installing Fonts
 yay -S pop-fonts --noconfirm
-yay -S ttf-roboto-slabs --noconfirm
+yay -S ttf-roboto-slab --noconfirm
 yay -S ttf-ubuntu-font-family --noconfirm
 
 echo # Installing Icon Themes
