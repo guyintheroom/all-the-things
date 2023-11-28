@@ -16,7 +16,7 @@ alias show-aliases="cat ~/.aliases"
 
 # Arch Specific
 alias rate-mirrors="rate-mirrors arch | sudo tee /etc/pacman.d/mirrorlist && clear && echo Mirrors Have Been Rated and Updated!"
-alias safe-yay="sudo timeshift --create --comments update && yay && flatpak update"
+alias safe-yay="sudo timeshift --create --comments update && yay && flatpak update && sudo paccache -rk2"
 
 # Debian Specific
 alias safe-nala="sudo timeshift --create --comments update && sudo nala update && sudo nala upgrade"
