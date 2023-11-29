@@ -23,7 +23,7 @@ yay -S --needed google-chrome rpi-imager timeshift mission-center mkinitcpio-fir
 cp -rT ~/all-the-things/yt-dl/ ~/Downloads/yt-dl/
 
 # Syncthing Service
-sudo systemctl enable --now syncthing@$USER.service --noconfirm
+sudo systemctl enable --now syncthing@$USER.service
 
 # Terminal Witchcraft!
 # Pre-Reqs and Emulator
