@@ -36,7 +36,7 @@ cp -rT ~/all-the-things/config-files/dot-files/alacritty.yml ~/.config/alacritty
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.config/zsh-plugins/powerlevel10k
 git clone https://github.com/zdharma-continuum/fast-syntax-highlighting ~/.config/zsh-plugins/fsh
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.config/zsh-plugins/zsh-autosuggestions
-yay -S pokemon-colorscripts-git --noconfirm
+yay -S pokemon-colorscripts-git neo-matrix-git --noconfirm
 
 # Dot Files
 cp -rT ~/all-the-things/config-files/dot-files/.p10k.zsh ~/.p10k.zsh
