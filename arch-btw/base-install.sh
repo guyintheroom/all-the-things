@@ -18,7 +18,7 @@ makepkg -si --noconfirm
 cd
 
 # Installing Basic Apps
-sudo pacman -S --needed neofetch discord pavucontrol inkscape vlc yt-dlp archlinux-wallpaper unrar arch-audit syncthing --noconfirm
+sudo pacman -S --needed neofetch discord pavucontrol inkscape vlc yt-dlp archlinux-wallpaper unrar arch-audit syncthing tailscale --noconfirm
 yay -S --needed google-chrome rpi-imager timeshift mission-center mkinitcpio-firmware downgrade rate-mirrors-bin --noconfirm
 cp -rT ~/all-the-things/yt-dl/ ~/Downloads/yt-dl/
 
@@ -31,6 +31,7 @@ sudo pacman -S --needed alacritty zsh zsh-completions tldr speedtest-cli thefuck
 yay -S alacritty-themes ttf-meslo-nerd-font-powerlevel10k --noconfirm
 mkdir ~/.config/alacritty
 cp -rT ~/all-the-things/config-files/dot-files/alacritty.yml ~/.config/alacritty/alacritty.yml
+cp -rT ~/all-the-things/config-files/dot-files/alacritty.toml ~/.config/alacritty/alacritty.toml
 
 # Plugins
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.config/zsh-plugins/powerlevel10k

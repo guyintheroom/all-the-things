@@ -1,9 +1,7 @@
 # General Aliases
 eval $(thefuck --alias)
-alias vpn-up="sudo wg-quick up wg0"
-alias vpn-down="sudo wg-quick down wg0"
-alias vpnb-up="sudo wg-quick up wg1"
-alias vpnb-down="sudo wg-quick down wg1"
+alias tailscale-enable="sudo systemctl enable tailscaled --now"
+alias tailscale-disable="sudo systemctl disable tailscaled"
 alias grep="grep --color=auto"
 alias pokemans="pokemon-colorscripts -r"
 alias redpill="neo-matrix --charset=ascii"
@@ -14,6 +12,7 @@ alias ll="ls -al"
 alias birthday="stat -c %w /"
 alias cat="bat --style=plain --paging=never"
 alias show-aliases="cat ~/.aliases"
+alias storage="df -h"
 
 # Arch Specific
 alias rate-mirrors="rate-mirrors arch | sudo tee /etc/pacman.d/mirrorlist && clear && echo Mirrors Have Been Rated and Updated!"
