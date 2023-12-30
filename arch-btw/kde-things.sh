@@ -2,7 +2,8 @@
 echo # Installs KDE Specific Things
 
 echo # Gnome Google Stuff
-sudo pacman -S skwalletmanager --noconfirm
+sudo pacman -S kwalletmanager --noconfirm
+yay -S konsave --noconfirm
 
 
 
