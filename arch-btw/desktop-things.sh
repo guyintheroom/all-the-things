@@ -9,7 +9,7 @@ yay -S --needed plex-media-player --noconfirm
 sudo pacman -S --needed pinta krita kdenlive ardour obs-studio flowblade --noconfirm
 
 # Installing Misc apps
-sudo pacman -S --needed bitwarden obsidian easyeffects lsp-plugins --noconfirm
+sudo pacman -S --needed bitwarden obsidian easyeffects lsp-plugins rpi-imager --noconfirm
 yay -S --needed drawio-desktop-bin --noconfirm
 
 # Installing Font-Repo
