@@ -18,12 +18,27 @@ makepkg -si --noconfirm
 cd
 
 # Installing Basic Apps
-sudo pacman -S --needed neofetch fastfetch discord pavucontrol inkscape vlc yt-dlp archlinux-wallpaper unrar arch-audit syncthing tailscale --noconfirm
+sudo pacman -S --needed neofetch fastfetch pavucontrol inkscape yt-dlp archlinux-wallpaper unrar arch-audit syncthing tailscale --noconfirm
 yay -S --needed google-chrome timeshift mission-center mkinitcpio-firmware downgrade rate-mirrors-bin neo-matrix-git --noconfirm
 cp -rT ~/all-the-things/yt-dl/ ~/Downloads/yt-dl/
 
 # Syncthing Service
 sudo systemctl enable --now syncthing@$USER.service
+
+# All Things Themes!
+# Copying Images to location
+sudo cp -rT ~/all-the-things/images/wallpapers /usr/share/backgrounds/my-wallpapers
+cp -rT ~/all-the-things/images/wallpapers ~/.local/share/backgrounds
+sudo cp -rT ~/all-the-things/images/icons /usr/share/backgrounds/icons
+
+# Installing Fonts
+yay -S pop-fonts --noconfirm
+yay -S ttf-roboto-slab --noconfirm
+yay -S ttf-ubuntu-font-family --noconfirm
+
+# Installing Icon Themes
+yay -S yaru-icon-theme --noconfirm
+yay -S bibata-cursor-theme --noconfirm
 
 # Terminal Witchcraft!
 # Pre-Reqs and Emulator
