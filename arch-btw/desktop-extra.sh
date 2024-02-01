@@ -9,8 +9,8 @@ yay -S --needed plex-media-player --noconfirm
 sudo pacman -S --needed pinta krita kdenlive ardour obs-studio flowblade --noconfirm
 
 # Installing Misc apps
-sudo pacman -S --needed bitwarden rpi-imager --noconfirm
-yay -S --needed drawio-desktop-bin --noconfirm
+sudo pacman -S --needed bitwarden --noconfirm
+yay -S --needed drawio-desktop-bin usbimager --noconfirm
 
 # Installing Font-Repo
 mkdir ~/.local/share/fonts
