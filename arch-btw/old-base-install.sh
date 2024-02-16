@@ -41,14 +41,12 @@ yay -S yaru-icon-theme --noconfirm
 yay -S bibata-cursor-theme --noconfirm
 
 # Terminal Witchcraft!
-# Pre-Reqs and Kitty Emulator
-sudo pacman -S --needed kitty zsh zsh-completions tldr speedtest-cli thefuck bat --noconfirm
-yay -S ttf-meslo-nerd-font-powerlevel10k --noconfirm
-# Add Kitty Configs
-mkdir ~/.config/kitty
-cp -rT ~/all-the-things/config-files/dot-files/kitty/kitty.conf ~/.config/kitty/kitty.conf
-cp -rT ~/all-the-things/config-files/dot-files/kitty/current-theme.conf ~/.config/kitty/current-theme.conf
-sed -e 's|Icon=.*|Icon=/home/guyintheroom/all-the-things/images/icons/kitty.app.png|' /usr/share/applications/kitty.desktop > ~/.local/share/applications/kitty.desktop
+# Pre-Reqs and Emulator
+sudo pacman -S --needed alacritty zsh zsh-completions tldr speedtest-cli thefuck bat --noconfirm
+yay -S alacritty-themes ttf-meslo-nerd-font-powerlevel10k --noconfirm
+mkdir ~/.config/alacritty
+cp -rT ~/all-the-things/config-files/dot-files/alacritty.yml ~/.config/alacritty/alacritty.yml
+cp -rT ~/all-the-things/config-files/dot-files/alacritty.toml ~/.config/alacritty/alacritty.toml
 
 # Plugins
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.config/zsh-plugins/powerlevel10k
@@ -56,14 +54,13 @@ git clone https://github.com/zdharma-continuum/fast-syntax-highlighting ~/.confi
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.config/zsh-plugins/zsh-autosuggestions
 yay -S pokemon-colorscripts-git neo-matrix-git --noconfirm
 
-# Copy General Dot Files
+# Dot Files
 cp -rT ~/all-the-things/config-files/dot-files/.p10k.zsh ~/.p10k.zsh
 cp -rT ~/all-the-things/config-files/dot-files/.zshrc ~/.zshrc
 cp -rT ~/all-the-things/config-files/dot-files/.bashrc ~/.bashrc
 cp -rT ~/all-the-things/config-files/dot-files/.aliases ~/.aliases
 
-# Enabling Zsh
-echo Changing from Bash to Zsh
+echo Changing from Bash to ZSH
 echo Script Paused - Password Needed During Next Step:
 read
 chsh -s /usr/bin/zsh
