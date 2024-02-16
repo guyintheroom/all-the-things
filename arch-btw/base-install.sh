@@ -32,9 +32,7 @@ cp -rT ~/all-the-things/images/wallpapers ~/.local/share/backgrounds
 sudo cp -rT ~/all-the-things/images/icons /usr/share/backgrounds/icons
 
 # Installing Fonts
-yay -S pop-fonts --noconfirm
-yay -S ttf-roboto-slab --noconfirm
-yay -S ttf-ubuntu-font-family --noconfirm
+yay -S pop-fonts ttf-roboto-slab ttf-ubuntu-font-family inter-font --noconfirm
 
 # Installing Icon Themes
 yay -S yaru-icon-theme --noconfirm

@@ -11,12 +11,8 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 sudo pacman -S --needed ffmpegthumbnailer gst-libav --noconfirm
 
 # Gnome Extensions
-sudo pacman -S --needed gnome-shell-extensions --noconfirm
-sudo pacman -S --needed libgtop lm_sensors gnome-icon-theme-symbolic gnome-icon-theme-git --noconfirm
-sudo pacman -S --needed gnome-tweaks --noconfirm
-yay -S --needed gnome-browser-connector --noconfirm
-yay -S --needed extension-manager --noconfirm
-yay -S --needed adw-gtk3 --noconfirm
+sudo pacman -S --needed gnome-shell-extensions libgtop lm_sensors gnome-tweaks --noconfirm
+yay -S --needed gnome-browser-connector extension-manager adw-gtk3 gnome-icon-theme-symbolic gnome-icon-theme --noconfirm
 
 # ArcMenu Install
 git clone https://gitlab.com/arcmenu/ArcMenu.git ~/.builds/ArcMenu
