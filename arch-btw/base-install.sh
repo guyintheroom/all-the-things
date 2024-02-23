@@ -45,7 +45,7 @@ yay -S ttf-meslo-nerd-font-powerlevel10k --noconfirm
 # Add Kitty Configs
 mkdir ~/.config/kitty
 cp -rT ~/all-the-things/config-files/dot-files/kitty/. ~/.config/kitty/
-sed -e 's|Icon=.*|Icon=~/all-the-things/config-files/dot-files/kitty/kitty.app.png|' /usr/share/applications/kitty.desktop > ~/.local/share/applications/kitty.desktop
+sed -e "s|Icon=.*|Icon=$HOME/.config/kitty/kitty.app.png|" /usr/share/applications/kitty.desktop > ~/.local/share/applications/kitty.desktop
 
 # Plugins
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.config/zsh-plugins/powerlevel10k
