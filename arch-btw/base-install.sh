@@ -44,10 +44,8 @@ sudo pacman -S --needed kitty zsh zsh-completions tldr speedtest-cli thefuck bat
 yay -S ttf-meslo-nerd-font-powerlevel10k --noconfirm
 # Add Kitty Configs
 mkdir ~/.config/kitty
-cp -rT ~/all-the-things/config-files/dot-files/kitty/kitty.conf ~/.config/kitty/kitty.conf
-cp -rT ~/all-the-things/config-files/dot-files/kitty/current-theme.conf ~/.config/kitty/current-theme.conf
-cp -rT ~/all-the-things/images/icons/kitty-tiny.png ~/.config/kitty/kitty-tiny.png
-sed -e 's|Icon=.*|Icon=/home/guyintheroom/all-the-things/images/icons/kitty.app.png|' /usr/share/applications/kitty.desktop > ~/.local/share/applications/kitty.desktop
+cp -rT ~/all-the-things/config-files/dot-files/kitty/. ~/.config/kitty/
+sed -e 's|Icon=.*|Icon=~/all-the-things/config-files/dot-files/kitty/kitty.app.png|' /usr/share/applications/kitty.desktop > ~/.local/share/applications/kitty.desktop
 
 # Plugins
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.config/zsh-plugins/powerlevel10k

@@ -3,7 +3,12 @@
 
 # Installing Multimedia Things
 sudo pacman -S --needed audacious spotify-launcher yt-dlp vlc --noconfirm
-yay -S --needed plex-media-player --noconfirm
+yay -S --needed vis plex-media-player --noconfirm
+
+# Vis Configs
+mkdir ~/.config/vis/colors
+cp -rT ~/all-the-things/config-files/dot-files/vis/config ~/.config/vis/config
+cp -rT ~/all-the-things/config-files/dot-files/vis/colors/. ~/.config/vis/colors/
 
 # Installing Editing Apps
 sudo pacman -S --needed pinta krita kdenlive ardour obs-studio flowblade --noconfirm
@@ -17,7 +22,7 @@ mkdir ~/.local/share/fonts
 cp -rvT ~/all-the-things/fonts ~/.local/share/fonts/
 
 echo # Bluetooth Things
-sudo pacman -S --needed bluez bluez-utils --noconfirm
+sudo pacman -S --needed bluez blueman bluez-utils --noconfirm
 sudo systemctl start bluetooth.service
 sudo systemctl enable bluetooth.service
 
