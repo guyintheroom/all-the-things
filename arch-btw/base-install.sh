@@ -40,11 +40,12 @@ yay -S bibata-cursor-theme --noconfirm
 
 # Terminal Witchcraft!
 # Pre-Reqs and Kitty Emulator
-sudo pacman -S --needed kitty zsh zsh-completions tldr speedtest-cli thefuck bat --noconfirm
-yay -S ttf-meslo-nerd-font-powerlevel10k zsh-theme-powerlevel10k-git --noconfirm
+sudo pacman -S --needed kitty zsh zsh-completions tldr speedtest-cli thefuck bat glances nethogs --noconfirm
+yay -S --needed ttf-meslo-nerd-font-powerlevel10k zsh-theme-powerlevel10k-git --noconfirm
 # Add Kitty Configs
 mkdir ~/.config/kitty
 cp -rT ~/all-the-things/config-files/dot-files/kitty/. ~/.config/kitty/
+# Gnome Icon
 sed -e "s|Icon=.*|Icon=$HOME/.config/kitty/kitty.app.png|" /usr/share/applications/kitty.desktop > ~/.local/share/applications/kitty.desktop
 
 # Plugins
