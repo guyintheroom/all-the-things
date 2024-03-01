@@ -15,7 +15,7 @@ alias spacesniffer="dust -r"
 
 # Arch Specific
 alias rate-mirrors="rate-mirrors arch | sudo tee /etc/pacman.d/mirrorlist && clear && echo Mirrors Have Been Rated and Updated!"
-alias safe-yay="sudo timeshift --create --comments update && yay && flatpak update && sudo paccache -rk2"
+alias update="~/all-the-things/arch-btw/update.sh"
 
 # Debian Specific
 alias safe-nala="sudo timeshift --create --comments update && sudo nala update && sudo nala upgrade"
