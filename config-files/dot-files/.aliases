@@ -11,7 +11,7 @@ alias birthday="stat -c %w /"
 alias cat="bat --style=plain --paging=never"
 alias show-aliases="cat ~/.aliases"
 alias storage="df -h"
-alias spacesniffer="dust"
+alias spacesniffer="dust -r"
 
 # Arch Specific
 alias rate-mirrors="rate-mirrors arch | sudo tee /etc/pacman.d/mirrorlist && clear && echo Mirrors Have Been Rated and Updated!"
