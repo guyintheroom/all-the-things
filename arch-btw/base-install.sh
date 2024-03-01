@@ -40,7 +40,7 @@ yay -S bibata-cursor-theme --noconfirm
 
 # Terminal Witchcraft!
 # Pre-Reqs and Kitty Emulator
-sudo pacman -S --needed kitty zsh zsh-completions tldr speedtest-cli thefuck bat glances nethogs --noconfirm
+sudo pacman -S --needed kitty zsh zsh-completions tldr speedtest-cli thefuck bat glances nethogs dust --noconfirm
 yay -S --needed ttf-meslo-nerd-font-powerlevel10k zsh-theme-powerlevel10k-git --noconfirm
 # Add Kitty Configs
 mkdir ~/.config/kitty

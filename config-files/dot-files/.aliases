@@ -1,7 +1,5 @@
 # General Aliases
 eval $(thefuck --alias)
-alias tailscale-enable="sudo systemctl enable tailscaled --now"
-alias tailscale-disable="sudo systemctl disable tailscaled"
 alias grep="grep --color=auto"
 alias pokemans="pokemon-colorscripts -r"
 alias redpill="neo-matrix --charset=ascii"
@@ -13,6 +11,7 @@ alias birthday="stat -c %w /"
 alias cat="bat --style=plain --paging=never"
 alias show-aliases="cat ~/.aliases"
 alias storage="df -h"
+alias spacesniffer="dust"
 
 # Arch Specific
 alias rate-mirrors="rate-mirrors arch | sudo tee /etc/pacman.d/mirrorlist && clear && echo Mirrors Have Been Rated and Updated!"
