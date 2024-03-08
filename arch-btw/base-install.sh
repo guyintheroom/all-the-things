@@ -1,7 +1,47 @@
 #!/bin/bash
 # Base Install for Arch Machines
+cat << "EOF" 
+                   -`
+                  .o+`
+                 `ooo/
+                `+oooo:
+               `+oooooo:
+               -+oooooo+:
+             `/:-:++oooo+:
+            `/++++/+++++++:
+           `/++++++++++++++:
+          `/+++ooooooooooooo/`
+         ./ooosssso++osssssso+`
+        .oossssso-````/ossssss+`
+       -osssssso.      :ssssssso.
+      :osssssss/        osssso+++.
+     /ossssssss/        +ssssooo/-
+   `/ossssso+/:-        -:/+osssso+-
+  `+sso+:-`                 `.-/+oso:
+ `++:.                           `-/+/
+ .`                                 `
+______ _____ _    _ 
+| ___ \_   _| |  | |
+| |_/ / | | | |  | |
+| ___ \ | | | |/\| |
+| |_/ / | | \  /\  /
+\____/  \_/  \/  \/ 
 
+
+EOF
 # Initial Things
+cat << "EOF" 
+ _____      _ _   _       _   _____ _     _                 
+|_   _|    (_) | (_)     | | |_   _| |   (_)                
+  | | _ __  _| |_ _  __ _| |   | | | |__  _ _ __   __ _ ___ 
+  | || '_ \| | __| |/ _` | |   | | | '_ \| | '_ \ / _` / __|
+ _| || | | | | |_| | (_| | |   | | | | | | | | | | (_| \__ \
+ \___/_| |_|_|\__|_|\__,_|_|   \_/ |_| |_|_|_| |_|\__, |___/
+                                                   __/ |    
+                                                  |___/     
+
+
+EOF
 cd
 mkdir ~/.builds
 sudo mkdir /mnt/shares
@@ -12,12 +52,36 @@ sudo pacman -S --needed base-devel git pacman-contrib --noconfirm
 git config --global core.editor nano
 
 # Installing Yay
+cat << "EOF" 
+__   __          _ 
+\ \ / /         | |
+ \ V /__ _ _   _| |
+  \ // _` | | | | |
+  | | (_| | |_| |_|
+  \_/\__,_|\__, (_)
+            __/ |  
+           |___/    
+
+
+EOF
 git clone https://aur.archlinux.org/yay.git ~/.builds/yay
 cd ~/.builds/yay
 makepkg -si --noconfirm
 cd
 
 # Installing Basic Apps
+cat << "EOF" 
+______           _         ___                  
+| ___ \         (_)       / _ \                 
+| |_/ / __ _ ___ _  ___  / /_\ \_ __  _ __  ___ 
+| ___ \/ _` / __| |/ __| |  _  | '_ \| '_ \/ __|
+| |_/ / (_| \__ \ | (__  | | | | |_) | |_) \__ \
+\____/ \__,_|___/_|\___| \_| |_/ .__/| .__/|___/
+                               | |   | |        
+                               |_|   |_|    
+
+
+EOF
 sudo pacman -S --needed neofetch fastfetch pavucontrol inkscape yt-dlp archlinux-wallpaper unrar arch-audit syncthing tailscale --noconfirm
 yay -S --needed google-chrome timeshift mission-center mkinitcpio-firmware downgrade rate-mirrors-bin neo-matrix-git --noconfirm
 cp -rT ~/all-the-things/yt-dl/ ~/Downloads/yt-dl/
@@ -26,6 +90,16 @@ cp -rT ~/all-the-things/yt-dl/ ~/Downloads/yt-dl/
 sudo systemctl enable --now syncthing@$USER.service
 
 # All Things Themes!
+cat << "EOF" 
+ _____ _                              _ 
+|_   _| |                            | |
+  | | | |__   ___ _ __ ___   ___  ___| |
+  | | | '_ \ / _ \ '_ ` _ \ / _ \/ __| |
+  | | | | | |  __/ | | | | |  __/\__ \_|
+  \_/ |_| |_|\___|_| |_| |_|\___||___(_)   
+
+
+EOF
 # Copying Images to location
 sudo cp -rT ~/all-the-things/images/wallpapers /usr/share/backgrounds/my-wallpapers
 cp -rT ~/all-the-things/images/wallpapers ~/.local/share/backgrounds
@@ -39,14 +113,24 @@ yay -S yaru-icon-theme --noconfirm
 yay -S bibata-cursor-theme --noconfirm
 
 # Terminal Witchcraft!
+cat << "EOF" 
+ _   ___ _   _           _____                   _             _ 
+| | / (_) | | |         |_   _|                 (_)           | |
+| |/ / _| |_| |_ _   _    | | ___ _ __ _ __ ___  _ _ __   __ _| |
+|    \| | __| __| | | |   | |/ _ \ '__| '_ ` _ \| | '_ \ / _` | |
+| |\  \ | |_| |_| |_| |   | |  __/ |  | | | | | | | | | | (_| | |
+\_| \_/_|\__|\__|\__, |   \_/\___|_|  |_| |_| |_|_|_| |_|\__,_|_|
+                  __/ |                                          
+                 |___/   
+
+
+EOF
 # Pre-Reqs and Kitty Emulator
 sudo pacman -S --needed kitty zsh zsh-completions tldr speedtest-cli thefuck bat glances nethogs dust --noconfirm
 yay -S --needed ttf-meslo-nerd-font-powerlevel10k zsh-theme-powerlevel10k-git --noconfirm
 # Add Kitty Configs
 mkdir ~/.config/kitty
 cp -rT ~/all-the-things/config-files/dot-files/kitty/. ~/.config/kitty/
-# Gnome Icon
-sed -e "s|Icon=.*|Icon=$HOME/.config/kitty/kitty.app.png|" /usr/share/applications/kitty.desktop > ~/.local/share/applications/kitty.desktop
 
 # Plugins
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.config/zsh-plugins/powerlevel10k
@@ -66,7 +150,20 @@ echo Script Paused - Password Needed During Next Step:
 read
 chsh -s /usr/bin/zsh
 
-echo :::::::
-echo Job Done!
-echo Reboot Required!
-echo :::::::
+# Complete!
+cat << "EOF" 
+   ___       _      ______                 _ 
+  |_  |     | |     |  _  \               | |
+    | | ___ | |__   | | | |___  _ __   ___| |
+    | |/ _ \| '_ \  | | | / _ \| '_ \ / _ \ |
+/\__/ / (_) | |_) | | |/ / (_) | | | |  __/_|
+\____/ \___/|_.__/  |___/ \___/|_| |_|\___(_)
+                                             
+                                             
+______     _                 _   _           
+| ___ \   | |               | | | |          
+| |_/ /___| |__   ___   ___ | |_| |          
+|    // _ \ '_ \ / _ \ / _ \| __| |          
+| |\ \  __/ |_) | (_) | (_) | |_|_|          
+\_| \_\___|_.__/ \___/ \___/ \__(_) 
+EOF

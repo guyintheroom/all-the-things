@@ -26,6 +26,12 @@ sudo pacman -S --needed bluez blueman bluez-utils --noconfirm
 sudo systemctl start bluetooth.service
 sudo systemctl enable bluetooth.service
 
-echo :::::::
-echo Job Done!
-echo :::::::
+# Complete!
+cat << "EOF" 
+   ___       _      ______                 _ 
+  |_  |     | |     |  _  \               | |
+    | | ___ | |__   | | | |___  _ __   ___| |
+    | |/ _ \| '_ \  | | | / _ \| '_ \ / _ \ |
+/\__/ / (_) | |_) | | |/ / (_) | | | |  __/_|
+\____/ \___/|_.__/  |___/ \___/|_| |_|\___(_)
+EOF
