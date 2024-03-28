@@ -24,24 +24,6 @@ cat << "EOF"
 
 EOF
 # Initial Things
-cat << "EOF" 
-______                _ _            
-| ___ \              | (_)           
-| |_/ / __ _ ___  ___| |_ _ __   ___ 
-| ___ \/ _` / __|/ _ \ | | '_ \ / _ \
-| |_/ / (_| \__ \  __/ | | | | |  __/
-\____/ \__,_|___/\___|_|_|_| |_|\___|
-                                     
-                                     
- _____          _        _ _         
-|_   _|        | |      | | |        
-  | | _ __  ___| |_ __ _| | |        
-  | || '_ \/ __| __/ _` | | |        
- _| || | | \__ \ || (_| | | |        
- \___/_| |_|___/\__\__,_|_|_|   
-
-
-EOF
 cd
 mkdir ~/.builds
 sudo mkdir /mnt/shares
@@ -91,7 +73,7 @@ cat << "EOF"
 
 EOF
 sudo pacman -S --needed neofetch fastfetch pavucontrol inkscape yt-dlp archlinux-wallpaper unrar arch-audit syncthing tailscale --noconfirm
-yay -S --needed google-chrome timeshift mission-center mkinitcpio-firmware downgrade rate-mirrors-bin neo-matrix-git --noconfirm
+yay -S --needed google-chrome timeshift mkinitcpio-firmware downgrade rate-mirrors-bin neo-matrix-git --noconfirm
 cp -rT ~/all-the-things/yt-dl/ ~/Downloads/yt-dl/
 
 # Syncthing Service

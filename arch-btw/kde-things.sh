@@ -1,9 +1,13 @@
 #!/bin/bash
 echo # Installs KDE Specific Things
 
-echo # Gnome Google Stuff
-sudo pacman -S kwalletmanager spectacle --noconfirm
+echo # Basic Apps
+sudo pacman -S kwalletmanager spectacle partitionmanager --noconfirm
 yay -S konsave --noconfirm
+
+echo # Konsave Profile
+konsave -i ~/all-the-things/config-files/konsave/baseline.knsv
+konsave -fa baseline
 
 # Complete!
 cat << "EOF" 
