@@ -1,0 +1,25 @@
+This is a list of commands to run to install individual apps as needed.
+This is not a script!
+
+# ::::::: Spotify :::::::
+#Easiest thing for this is to use snap:
+sudo snap install spotify
+
+# ::::::: Discord :::::::
+This also can use snap:
+sudo snap install discord
+
+# ::::::: Steam :::::::
+sudo nala install steam-installer
+#	Install Proton from Steam - Under Tools - Install latest package
+
+# ::::::: Heroic Launcher (Epic Games) :::::::
+bash <(wget -qO- https://raw.githubusercontent.com/Heroic-Games-Launcher/HeroicGamesLauncher/main/rauldipeas.sh)
+
+# ::::::: Lutris Install :::::::
+sudo nala install lutris
+#	Installing Non-Steam Games
+#		Preferences > Runners
+#		Click on the download button for Wine > Select the latest version of Proton
+#		Back in the settings > Click the gear on Wine
+#		Select the version of Proton you just downloaded under the “Wine Version”
